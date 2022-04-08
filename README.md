@@ -43,5 +43,37 @@ for(int fast=0;fast<nums.length;fast++){
 `给定一个含有 n 个正整数的数组和一个正整数 target 。
 找出该数组中满足其和 ≥ target 的长度最小的 连续子数组 [numsl, numsl+1, ..., numsr-1, numsr] ，并返回其长度。如果不存在符合条件的子数组，返回 0 。
 `
-
 这题主要用快慢指针也可以用滑动窗口做。
+
+### * leetcode 76 （重做） 4.8
+对于其他要按顺序查找的子串，可以用map储存后，再减少的方式进行滑动窗口的判断
+### * leetcode 904 (重做) 4.8
+
+### * leetcode 59 55
+对于螺旋输出或者输入矩阵可以采用left right top bottom这四个变量来限制他的输入输出，同时加入val在for中，判断熟不熟数字都输出完了
+```java
+while(val>0){
+            for(int i=left;i<=right&&val>0;i++){
+                result.add(matrix[top][i]);
+                val--;
+            }
+            top++;
+            for(int i=top;i<=bottom&&val>0;i++){
+                result.add(matrix[i][right]);
+                val--;
+            }
+            right--;
+            for(int i=right;i>=left&&val>0;i--){
+                result.add(matrix[bottom][i]);
+                val--;
+            }
+            bottom--;
+            for(int i=bottom;i>=top&&val>0;i--){
+                result.add(matrix[i][left]);
+                val--;
+            }
+            left++;
+        }
+```
+
+数组更新完成
