@@ -48,6 +48,17 @@ for(int fast=0;fast<nums.length;fast++){
 ### * leetcode 76 （重做） 4.8
 对于其他要按顺序查找的子串，可以用map储存后，再减少的方式进行滑动窗口的判断
 ### * leetcode 904 (重做) 4.8
+类似的滑动窗口的框架
+```java
+for(int j=0;j<n;j++){
+//窗口的维护工作
+
+while(){
+//结果的更新
+//左边窗口的移动动作
+}
+}
+```
 
 ### * leetcode 59 55
 对于螺旋输出或者输入矩阵可以采用left right top bottom这四个变量来限制他的输入输出，同时加入val在for中，判断熟不熟数字都输出完了
